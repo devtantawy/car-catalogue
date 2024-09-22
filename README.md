@@ -57,11 +57,6 @@ git clone git@github.com:devtantawy/car-catalogue.git car-catalogue
     - make sure no other containers are running with the same ports
     - make sure you have executed `make up`
 
-2. when running `npm run watch` it never finish compiling ?
-    - first run `npm run prod`
-    - then `npm run watch`
-    - now it should work
-
 3. i uploaded a file & i cant render it on the browser ?
     - use `Storage::url($your_uploaded_file_path)`
 

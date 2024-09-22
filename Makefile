@@ -48,16 +48,7 @@ clean:
 	$(SAIL) artisan route:clear;
 
 sniffer: ## Run the php code sniffer and fixes anything it can
-	$(SAIL) php -d memory_limit=-1 $(BIN)/phpcbf --colors  app/Http/Controllers && \
-		$(BIN)/phpcbf --colors  app/Providers && \
-		$(BIN)/phpcbf --colors  app/Http && \
-		$(BIN)/phpcbf --colors  app/Console && \
-		$(BIN)/phpcbf --colors  app/Events && \
-		$(BIN)/phpcbf --colors  app/Listeners && \
-		$(BIN)/phpcbf --colors  app/Mail && \
-		$(BIN)/phpcbf --colors  app/Notifications && \
-		$(BIN)/phpcbf --colors  app/Http/Middleware && \
-		$(BIN)/phpcbf --colors  app/Http/Requests
+	$(SAIL) php -d memory_limit=-1 $(BIN)/phpcbf --colors  app/Http/API/Controllers
 
 test:
 	$(SAIL) artisan test;
